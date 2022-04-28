@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(36, 36, 36);
+}
+
+p,a,h1,h2,h3,h4,h5,h6,label,li,button{
+    font-family: 'Bangers', cursive;
+    color: #fff;
+}
+
+.disp-none{
+    display: none !important;
+}
+
+.disp-flex{
+    display: flex;
+}
+
+.bg{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(https://res.cloudinary.com/dn3c3zw9h/image/upload/v1648465212/DC%20Hero%20Database/dc-bg_ijde9c.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%) opacity(20%);
+    position: fixed;
+    z-index: -1;
+}
+
+.container{
+    margin: auto;
+}
+
+.title{
+    text-align: center;
+    font-size: 3rem;
+    padding: 1rem 0;
+    letter-spacing: 1px;
+}
+
+.heroes_list{
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hero{
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1rem;
+}
+
+.hero_img{
+    width: 150px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1rem 0;
+    border: 2px solid rgb(250, 250, 250);
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 8px 24px;
+}
+
+.pop-up{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.pop_up_window{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.564);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop_up_wrapper{
+   background: rgb(60,60,60);
+   background: linear-gradient(131deg, rgba(60,60,60,1) 8%, rgba(25,25,25,1) 57%);
+   width: 750px;
+   height: 480px;
+   border-radius: 1rem;
+   overflow: hidden;
+   display: grid;
+  grid-template-columns: 1fr .5fr;
+  grid-template-rows: 1fr;
+  margin: 0 1rem;
+}
+
+.pop_img{
+    grid-column: 2/3;
+    max-width: 100%;
+    background-image: url(https://www.superherodb.com/pictures2/portraits/10/100/1460.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero_content{
+    margin: 1rem;
+}
+
+.hero_fullname{
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.bio{
+    color: rgb(227, 0, 0);
+    margin-bottom: .5rem;
+}
+
+.bio_container{
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+}
+
+.num{
+    margin-left: 1rem;
+    color: rgb(4, 244, 100);
+}
+
+.bar{
+    width: 100%;
+    height: 1rem;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.innerbar{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*transform: translateX(-100%);*/
+    background-color: rgb(4, 244, 100);
+    /*transition: transform 5s ease-in-out;*/
+}
+
+@media only screen and (max-width: 600px) {
+.pop_up_wrapper{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr .5fr;
+}
+}
